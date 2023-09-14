@@ -46,7 +46,6 @@ class ControladorReportes
 							<td style='font-weight:bold; border:1px solid #eee;'>CATEGORIA</td>
 							<td style='font-weight:bold; border:1px solid #eee;'>DETALLES</td>
 							<td style='font-weight:bold; border:1px solid #eee;'>PRECIO</td>
-                            <td style='font-weight:bold; border:1px solid #eee;'>SKU</td>
 							<td style='font-weight:bold; border:1px solid #eee;'>FECHA</td>
 
 
@@ -76,7 +75,6 @@ class ControladorReportes
 			 					  	 <td style='border:1px solid #eee;'>" . $categorias["categoria"] . "</td>
 			 					  	 <td style='border:1px solid #eee;'>" . $value["detalle"] . "</td>
 			 					  	  <td style='border:1px solid #eee;'>" . $value["precio"] . "</td>
-                                      <td style='border:1px solid #eee;'>" . $value["SKU"] . "</td>
 			 					  	  <td style='border:1px solid #eee;'>" . $value["fecha"] . "</td>
 
 			 					  	 </tr>");
