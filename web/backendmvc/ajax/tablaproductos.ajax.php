@@ -16,7 +16,7 @@ class TablaProductos
         $valor = null;
 
         $productos = ControladorProductos::ctrMostrarProductos($item, $valor);
-        //var_dump($productos);
+        // var_dump($productos);
         if (count($productos)) {
             $datosJson = '{
                 "data":[';
@@ -71,7 +71,6 @@ class TablaProductos
                         "' . $productos[$i]["detalle"] . '",
                         "' . $productos[$i]["descripcion"] . '",
                         "' . $precio . '",
-                        "' . $productos[$i]["SKU"] . '",
                         "' . $imagen . '",
                         "' . $productos[$i]["fecha"] . '",
                         "' . $acciones . '"

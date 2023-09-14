@@ -62,7 +62,6 @@
 					               <th>Descripcion</th>
 					               <th>Detalles</th>
 					               <th>Precio</th>
-                         <th>SKU</th>
 					               <th>Foto</th>
 					               <th>Fecha</th>
 					               <th>Acciones</th>
@@ -102,7 +101,7 @@ MODAL AGREGAR PRODUCTO
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Titulo</span>
           </div>
-          <input type="text" class="form-control" placeholder="titulo" id="titulo" name="titulo" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" placeholder="titulo" id="titulo" name="titulo" aria-label="Username" aria-describedby="basic-addon1" id="titulo">
         </div>
 
         <div class="input-group mb-3">
@@ -148,13 +147,6 @@ foreach ($categorias as $key => $value) {
             <span class="input-group-text" id="basic-addon3">precio</span>
           </div>
           <input type="number" class="form-control" name="precio" id="precio" aria-describedby="basic-addon3">
-        </div>
-
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">SKU</span>
-          </div>
-          <input type="text" class="form-control" placeholder="SKU" id="SKU" name="SKU" aria-label="Username" aria-describedby="basic-addon1">
         </div>
 
         <div class="input-group mb-3">
@@ -253,13 +245,6 @@ foreach ($categorias as $key => $value) {
             <span class="input-group-text precio" id="basic-addon3">precio</span>
           </div>
           <input type="number" class="form-control editarprecio" name="editarprecio" id="editarprecio" aria-describedby="basic-addon3">
-        </div>
-
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">SKU</span>
-          </div>
-          <input type="text" class="form-control" placeholder="editarSKU" id="editarSKU" name="editarSKU" aria-label="Username" aria-describedby="basic-addon1">
         </div>
 
         <div class="input-group mb-3">
