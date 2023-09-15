@@ -105,6 +105,7 @@ $("#guardarProducto").click(function() {
     var descripcion = $("#descripcion").val();
     var detalle = $("#detalle").val();
     var precio = $("#precio").val();
+    var SKU = $("#SKU").val();
     //var foto = $("#foto").val();
     var datosProducto = new FormData();
     datosProducto.append("titulo", titulo);
@@ -113,6 +114,7 @@ $("#guardarProducto").click(function() {
     datosProducto.append("categoria", categoria);
     datosProducto.append("descripcion", descripcion);
     datosProducto.append("precio", precio);
+    datosProducto.append("SKU", SKU);
     datosProducto.append("foto", imagen);
     $.ajax({
         url: "ajax/productos.ajax.php",
@@ -157,6 +159,7 @@ $('.tablaProductos tbody').on("click", ".btnEditarProducto", function() {
             $("#modalEditarProducto .editardescripcion").val(respuesta[0]["descripcion"]);
             $("#modalEditarProducto .editardetalle").val(respuesta[0]["detalle"]);
             $("#modalEditarProducto .editarprecio").val(respuesta[0]["precio"]);
+            $("#modalEditarProducto .editarSKU").val(respuesta[0]["SKU"]);
             $("#modalEditarProducto .editarfoto").val(respuesta[0]["foto"]);
             if (respuesta[0]["foto"] != "") {
                 $("#modalEditarProducto .previsualizar").attr("src", respuesta[0]["foto"]);
@@ -187,6 +190,7 @@ $('.tablaProductos tbody').on("click", ".btnEditarProducto", function() {
                 var categoria = $("#modalEditarProducto .editarcategoria").val();
                 var detalle = $("#modalEditarProducto .editardetalle").val();
                 var precio = $("#modalEditarProducto .editarprecio").val();
+                var SKU = $("#modalEditarProducto .editarSKU").val();
                 var descripcion = $("#modalEditarProducto .editardescripcion").val();
                 var antiguaFoto = $("#modalEditarProducto .editarantiguaFoto").val();
                 var datosProducto = new FormData();
@@ -197,6 +201,7 @@ $('.tablaProductos tbody').on("click", ".btnEditarProducto", function() {
                 datosProducto.append("detalle", detalle);
                 datosProducto.append("descripcion", descripcion);
                 datosProducto.append("precio", precio);
+                datosProducto.append("SKU", SKU);
                 datosProducto.append("antiguaFoto", antiguaFoto);
                 $.ajax({
                     url: "ajax/productos.ajax.php",

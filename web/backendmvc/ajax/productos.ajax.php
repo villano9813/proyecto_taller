@@ -53,6 +53,7 @@ class AjaxProductos
     public $detalle;
     public $categoria;
     public $precio;
+    public $SKU;
     public $peso;
     public $entrega;
     public $descripcion;
@@ -70,6 +71,7 @@ class AjaxProductos
             "detalle"     => $this->detalle,
             "categoria"   => $this->categoria,
             "precio"      => $this->precio,
+            "SKU"         => $this->SKU,
             "descripcion" => $this->descripcion,
             "foto"        => $this->foto,
         );
@@ -111,6 +113,7 @@ class AjaxProductos
             "detalle"     => $this->detalle,
             "categoria"   => $this->categoria,
             "precio"      => $this->precio,
+            "SKU"         => $this->SKU,
             "descripcion" => $this->descripcion,
             "foto"        => $this->foto,
         );
@@ -159,6 +162,7 @@ if (isset($_POST["titulo"])) {
     $producto->categoria   = $_POST["categoria"];
     $producto->descripcion = $_POST["descripcion"];
     $producto->precio      = $_POST["precio"];
+    $producto->SKU         = $_POST["SKU"];
 
     if (isset($_FILES["foto"])) {
 
@@ -201,6 +205,7 @@ if (isset($_POST["id"])) {
     $editarProducto->categoria   = $_POST["categoria"];
     $editarProducto->descripcion = $_POST["descripcion"];
     $editarProducto->precio      = $_POST["precio"];
+    $editarProducto->SKU         = $_POST["SKU"];
 
     if (isset($_FILES["foto"])) {
 

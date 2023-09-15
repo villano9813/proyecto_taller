@@ -62,6 +62,7 @@
 					               <th>Descripcion</th>
 					               <th>Detalles</th>
 					               <th>Precio</th>
+                         <th>SKU</th>
 					               <th>Foto</th>
 					               <th>Fecha</th>
 					               <th>Acciones</th>
@@ -147,6 +148,13 @@ foreach ($categorias as $key => $value) {
             <span class="input-group-text" id="basic-addon3">precio</span>
           </div>
           <input type="number" class="form-control" name="precio" id="precio" aria-describedby="basic-addon3">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">SKU</span>
+          </div>
+          <input type="text" class="form-control" placeholder="SKU" id="SKU" name="SKU" aria-label="Username" aria-describedby="basic-addon1" id="SKU">
         </div>
 
         <div class="input-group mb-3">
@@ -245,6 +253,13 @@ foreach ($categorias as $key => $value) {
             <span class="input-group-text precio" id="basic-addon3">precio</span>
           </div>
           <input type="number" class="form-control editarprecio" name="editarprecio" id="editarprecio" aria-describedby="basic-addon3">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">SKU</span>
+          </div>
+          <input type="text" class="form-control" placeholder="SKU" id="SKU" name="SKU" aria-label="Username" aria-describedby="basic-addon1" id="SKU">
         </div>
 
         <div class="input-group mb-3">

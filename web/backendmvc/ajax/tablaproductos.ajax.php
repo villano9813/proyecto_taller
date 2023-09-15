@@ -71,6 +71,7 @@ class TablaProductos
                         "' . $productos[$i]["detalle"] . '",
                         "' . $productos[$i]["descripcion"] . '",
                         "' . $precio . '",
+                        "' . $productos[$i]["SKU"] . '",
                         "' . $imagen . '",
                         "' . $productos[$i]["fecha"] . '",
                         "' . $acciones . '"

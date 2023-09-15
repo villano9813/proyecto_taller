@@ -60,7 +60,7 @@ class ModeloProductos
     public static function mdlIngresarProducto($tabla, $datos)
     {
 
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_categoria, ruta, estado,  titulo, detalle, precio, foto, descripcion ) VALUES (:id_categoria, :ruta, :estado, :titulo, :detalle, :precio, :foto,  :descripcion)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_categoria, ruta, estado,  titulo, detalle, precio, foto, SKU, descripcion ) VALUES (:id_categoria, :ruta, :estado, :titulo, :detalle, :precio, :SKU, :foto,  :descripcion)");
 
         $stmt->bindParam(":id_categoria", $datos["categoria"], PDO::PARAM_STR);
         $stmt->bindParam(":ruta", $datos["ruta"], PDO::PARAM_STR);
@@ -68,6 +68,7 @@ class ModeloProductos
         $stmt->bindParam(":titulo", $datos["titulo"], PDO::PARAM_STR);
         $stmt->bindParam(":detalle", $datos["detalle"], PDO::PARAM_STR);
         $stmt->bindParam(":precio", $datos["precio"], PDO::PARAM_STR);
+        $stmt->bindParam(":SKU", $datos["SKU"], PDO::PARAM_STR);
         $stmt->bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
         $stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
 
@@ -93,7 +94,7 @@ class ModeloProductos
     public static function mdlEditarProducto($tabla, $datos)
     {
 
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, , ruta = :ruta, estado = :estado, titulo = :titulo, detalle = :detalle , precio = :precio, :detalles, , foto = :foto,  descripcion = :descripcion  WHERE id = :id");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, , ruta = :ruta, estado = :estado, titulo = :titulo, detalle = :detalle , precio = :precio, SKU = :SKU, :detalles, , foto = :foto,  descripcion = :descripcion  WHERE id = :id");
 
         $stmt->bindParam(":id_categoria", $datos["categoria"], PDO::PARAM_STR);
         $stmt->bindParam(":ruta", $datos["ruta"], PDO::PARAM_STR);
@@ -101,6 +102,7 @@ class ModeloProductos
         $stmt->bindParam(":titulo", $datos["titulo"], PDO::PARAM_STR);
         $stmt->bindParam(":detalle", $datos["detalle"], PDO::PARAM_STR);
         $stmt->bindParam(":precio", $datos["precio"], PDO::PARAM_STR);
+        $stmt->bindParam(":SKU", $datos["SKU"], PDO::PARAM_STR);
         $stmt->bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
         $stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
         $stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);

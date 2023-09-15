@@ -110,6 +110,7 @@ class ControladorProductos
                     "estado"      => 1,
                     "descripcion" => $datos["descripcion"],
                     "precio"      => $datos["precio"],
+                    "SKU"         => $datos["SKU"],
                     "foto"        => $rutaFotoPrincipal,
                     "ruta"        => $datos["ruta"],
 
@@ -226,6 +227,7 @@ class ControladorProductos
                     "titulo"      => $datos["editartitulo"],
                     "categoria"   => $datos["editarcategoria"],
                     "detalle"     => $datos["editardetalle"],
+                    "SKU"         => $datos["editarSKU"],
                     "foto"        => $datos["editarfoto"],
                     "descripcion" => $datos["editardescripcion"],
                 );
