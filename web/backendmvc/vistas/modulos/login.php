@@ -2,7 +2,7 @@
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="index.html">
+                    <a href="/proyecto_taller/web/">
                         <img class="align-content" src="vistas/img/plantilla/logo.jpg" alt="">
                     </a>
                 </div>

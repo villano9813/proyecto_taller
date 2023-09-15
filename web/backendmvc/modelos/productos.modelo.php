@@ -68,9 +68,9 @@ class ModeloProductos
         $stmt->bindParam(":titulo", $datos["titulo"], PDO::PARAM_STR);
         $stmt->bindParam(":detalle", $datos["detalle"], PDO::PARAM_STR);
         $stmt->bindParam(":precio", $datos["precio"], PDO::PARAM_STR);
-        $stmt->bindParam(":SKU", $datos["SKU"], PDO::PARAM_STR);
         $stmt->bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
         $stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
+        $stmt->bindParam(":SKU", $datos["SKU"], PDO::PARAM_INT);
 
         if ($stmt->execute()) {
 
@@ -102,10 +102,10 @@ class ModeloProductos
         $stmt->bindParam(":titulo", $datos["titulo"], PDO::PARAM_STR);
         $stmt->bindParam(":detalle", $datos["detalle"], PDO::PARAM_STR);
         $stmt->bindParam(":precio", $datos["precio"], PDO::PARAM_STR);
-        $stmt->bindParam(":SKU", $datos["SKU"], PDO::PARAM_STR);
         $stmt->bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
         $stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
         $stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+        $stmt->bindParam(":SKU", $datos["SKU"], PDO::PARAM_INT);
 
         if ($stmt->execute()) {
 
